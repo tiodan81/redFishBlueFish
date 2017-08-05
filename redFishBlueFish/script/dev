@@ -1,0 +1,2 @@
+mix do deps.get, ecto.create, ecto.migrate
+mix phx.server
