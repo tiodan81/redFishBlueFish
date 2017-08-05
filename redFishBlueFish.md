@@ -12,7 +12,7 @@ red/blue/cool-grey
     - images (e.g. back/front)
       - preview thumbs of all views
       - kid in item
-    - product name
+    - name
     - price
     - fabric origin
     - fabric process
