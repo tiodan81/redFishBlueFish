@@ -19,6 +19,7 @@ type QueryParams = {
 }
 
 export default function request(url: string, method?: string, queryParams?: QueryParams): Promise {
+  const baseUrl = `http://localhost:4000${url}`
   const defaultParams = {
     credentials: 'same-origin',
     method: method ? method : 'GET',
@@ -29,7 +30,7 @@ export default function request(url: string, method?: string, queryParams?: Quer
   }
 
   const queryString = qs.stringify(queryParams)
-  const endpoint = queryString ? `${url}?${queryString}` : url
+  const endpoint = queryString ? `${baseUrl}?${queryString}` : baseUrl
 
   return fetch(endpoint, defaultParams)
     .then(checkStatus)
