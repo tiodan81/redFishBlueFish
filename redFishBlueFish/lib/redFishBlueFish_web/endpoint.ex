@@ -38,6 +38,9 @@ defmodule RedFishBlueFishWeb.Endpoint do
     key: "_redFishBlueFish_key",
     signing_salt: "ONG8rSbn"
 
+  plug Corsica, origins: "http://localhost:3000", allow_headers: ["content-type"]
+
+
   plug RedFishBlueFishWeb.Router
 
   @doc """
