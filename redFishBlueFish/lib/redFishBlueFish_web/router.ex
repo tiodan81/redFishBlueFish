@@ -2,7 +2,7 @@ defmodule RedFishBlueFishWeb.Router do
   use RedFishBlueFishWeb, :router
 
   pipeline :browser do
-    plug :accepts, ["html"]
+    plug :accepts, ["html", "json"]
     plug :fetch_session
     plug :fetch_flash
     plug :protect_from_forgery
@@ -15,7 +15,7 @@ defmodule RedFishBlueFishWeb.Router do
 
   scope "/", RedFishBlueFishWeb do
     pipe_through :browser # Use the default browser stack
-
+    get "/products", ProductController, :index
     get "/", PageController, :index
   end
 
