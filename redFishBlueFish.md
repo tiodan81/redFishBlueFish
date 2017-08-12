@@ -19,6 +19,10 @@ red/blue/cool-grey
     - materials
     - care instructions
     - sold : bool
+    - etsy link
+    - pattern attribution
+      - pattern number
+      - author
 
 - admin page
   - CRUD products
